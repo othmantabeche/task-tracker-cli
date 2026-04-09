@@ -2,7 +2,7 @@ import json
 import os
 import unittest
 
-from add_tasks import add_tasks
+from CRUD.add_tasks import add_tasks
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FILE_PATH = os.path.join(BASE_DIR, "tasks_test.json")
