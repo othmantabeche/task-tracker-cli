@@ -10,13 +10,13 @@ def main():
     subparsers = parser.add_subparsers(dest="command")
 
     add_parser = subparsers.add_parser("add", help="Add a new task")
-    add_parser.add_argument("task", type=str, help="The task to add")
+    add_parser.add_argument("description", type=str, help="The task to add")
 
     args = parser.parse_args()
 
     match args.command:
         case "add":
-            add_tasks(args.task)
+            add_tasks(args.description)
         case _:
             parser.print_help()
 
